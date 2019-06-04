@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import ru.k113.rxwh4.R;
 
 public class RetrofitActivity extends AppCompatActivity {
@@ -12,6 +15,8 @@ public class RetrofitActivity extends AppCompatActivity {
     private static final String TAG = "mRetrofitActivity";
 
     private RetrofitPresenter retrofitPresenter;
+
+    Gson gson = new GsonBuilder().create();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

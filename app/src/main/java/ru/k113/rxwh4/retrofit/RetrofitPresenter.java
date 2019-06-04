@@ -12,7 +12,7 @@ public class RetrofitPresenter {
 
     private RetrofitApi retrofitApi;
 
-    public RetrofitPresenter() {        retrofitApi = new RetrofitApi();    }
+    public RetrofitPresenter() { retrofitApi = new RetrofitApi();    }
 
     public void getString() {
         Observable<String> single = retrofitApi.requestServer();
@@ -20,9 +20,8 @@ public class RetrofitPresenter {
         Disposable disposable = single.observeOn(AndroidSchedulers.mainThread()).subscribe(str -> {
             Log.d(TAG, "onNext: " + str);
         }, throwable -> {
-            Log.e(TAG, "onError");
+            Log.e(TAG, "onError" + throwable);
         });
     }
-
 
 }
