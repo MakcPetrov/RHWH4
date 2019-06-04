@@ -8,13 +8,11 @@ import io.reactivex.disposables.Disposable;
 
 public class RetrofitPresenter {
 
-    private static final String TAG = "RetrofitDifPresenter";
+    private static final String TAG = "mRetrofitPresenter";
 
     private RetrofitApi retrofitApi;
 
-    public RetrofitPresenter() {
-        retrofitApi = new RetrofitApi();
-    }
+    public RetrofitPresenter() {        retrofitApi = new RetrofitApi();    }
 
     public void getString() {
         Observable<String> single = retrofitApi.requestServer();

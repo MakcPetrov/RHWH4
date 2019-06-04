@@ -17,12 +17,12 @@ public class RetrofitActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
-
+        retrofitPresenter = new RetrofitPresenter();
     }
 
     public void onClickButton(View view) {
         Log.d(TAG, "onClickButton: ");
-        //retrofitPresenter.getString();
+        retrofitPresenter.getString();
     }//onClickButton
 
 }
