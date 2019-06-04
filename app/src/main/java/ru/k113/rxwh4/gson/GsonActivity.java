@@ -11,7 +11,8 @@ import ru.k113.rxwh4.R;
 
 public class GsonActivity extends AppCompatActivity {
 
-    private static final String TAG = "GsonActivity";
+    private static final String TAG = "mGsonActivity";
+
     String json = "{\"time_of_year\": \"summer\", \"year\": 2019"+"}";
 
     Gson gson = new GsonBuilder().create();
